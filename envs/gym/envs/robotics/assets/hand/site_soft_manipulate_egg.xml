@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco>
+    <compiler angle="radian" coordinate="local" meshdir="../stls/hand" texturedir="../textures"></compiler>
+    <option timestep="0.002" iterations="20" apirate="200">
+        <flag warmstart="enable"></flag>
+    </option>
+
+    <include file="modified_shared.xml"></include>
+
+    <asset>
+        <include file="shared_asset.xml"></include>
+
+        <texture name="texture:object" file="block.png" gridsize="3 4" gridlayout=".U..LFRB.D.."></texture>
+        <texture name="texture:hidden" file="block_hidden.png" gridsize="3 4" gridlayout=".U..LFRB.D.."></texture>
+
+        <material name="material:object" texture="texture:object" specular="1" shininess="0.3" reflectance="0"></material>
+        <material name="material:hidden" texture="texture:hidden" specular="1" shininess="0.3" reflectance="0"></material>
+        <material name="material:target" texture="texture:object" specular="1" shininess="0.3" reflectance="0" rgba="1 1 1 0.5"></material>
+    </asset>
+
+    <worldbody>
+        <geom name="floor0" pos="1 1 0" size="1 1 1" type="plane" condim="3" material="floor_mat"></geom>
+        <body name="floor0" pos="1 1 0"></body>
+
+        <site name="contact1" pos="1 0.9 0.25" size="0.008" rgba="1 0 0 1" type="sphere"></site>
+        <site name="contact2" pos="1 0.9 0.25" size="0.008" rgba="0 1 0 1" type="sphere"></site>
+        <site name="contact3" pos="1 0.9 0.25" size="0.008" rgba="0 0 1 1" type="sphere"></site>
+        <site name="contact4" pos="1 0.9 0.25" size="0.008" rgba="1 1 0 1" type="sphere"></site>
+        <site name="contact5" pos="1 0.9 0.25" size="0.008" rgba="1 0 1 1" type="sphere"></site>
+        <site name="contact6" pos="1 0.9 0.25" size="0.008" rgba="1 1 1 1" type="sphere"></site>
+        <site name="contact7" pos="1 0.9 0.25" size="0.008" rgba="0 1 1 1" type="sphere"></site>
+        <site name="contact8" pos="1 0.9 0.25" size="0.008" rgba="1 0.5 1 1" type="sphere"></site>
+        <site name="contact9" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact10" pos="1 0.9 0.25" size="0.008" rgba="1 0.5 0.5 1" type="sphere"></site>
+        <site name="contact11" pos="1 0.9 0.25" size="0.008" rgba="0.5 1 0.5 1" type="sphere"></site>
+        <site name="contact12" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.3 1" type="sphere"></site>
+        <site name="contact13" pos="1 0.9 0.25" size="0.008" rgba="1 0.3 0.5 1" type="sphere"></site>
+        <site name="contact14" pos="1 0.9 0.25" size="0.008" rgba="0.3 1 0.5 1" type="sphere"></site>
+        <site name="contact15" pos="1 0.9 0.25" size="0.008" rgba="1 0.7 0.5 1" type="sphere"></site>
+        <site name="contact16" pos="1 0.9 0.25" size="0.008" rgba="0.7 1 0.5 1" type="sphere"></site>
+        <site name="contact17" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.7 1" type="sphere"></site>
+        <site name="contact18" pos="1 0.9 0.25" size="0.008" rgba="1 0.2 0.7 1" type="sphere"></site>
+        <site name="contact19" pos="1 0.9 0.25" size="0.008" rgba="1 0.2 0.1 1" type="sphere"></site>
+        <site name="contact20" pos="1 0.9 0.25" size="0.008" rgba="0 0.1 0.3 1" type="sphere"></site>
+        <site name="contact21" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact22" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact23" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact24" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact25" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact26" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact27" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact28" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact29" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact30" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact31" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact32" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact33" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact34" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact35" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact36" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact37" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact38" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact39" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact40" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact41" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact42" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact43" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact44" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact45" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact46" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact47" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact48" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact49" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact50" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact51" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact52" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact53" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact54" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact55" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact56" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact57" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact58" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact59" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact60" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact61" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact62" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact63" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact64" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact65" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact66" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact67" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact68" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact69" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact70" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact71" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact72" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact73" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact74" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact75" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact76" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact77" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact78" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact79" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+        <site name="contact80" pos="1 0.9 0.25" size="0.008" rgba="1 1 0.5 1" type="sphere"></site>
+
+
+        <include file="robot.xml"></include>
+
+        <body name="object" pos="1 0.87 0.2">
+            <joint name="object:joint" type="free" damping="0.01"/>
+            <site name="object:center" pos="0 0 0" rgba="1 0 0 0" size="0.01 0.01 0.01"></site>
+            <composite type="ellipsoid" count='6 6 8' spacing='0.01' prefix='object'>
+                <geom type="capsule" size="0.0095 0.0095" rgba="1 0 0 0.1" condim="4"/>
+            </composite>
+            <!-- <geom name="object" type="ellipsoid" size="0.03 0.03 0.04" material="material:target" condim="4"></geom> -->
+        </body>
+        <body name="target" pos="10 8.7 2">
+            <geom name="target" type="ellipsoid" size="0.03 0.03 0.04" material="material:target" condim="4" group="2" contype="0" conaffinity="0"></geom>
+            <site name="target:center" pos="0 0 0" rgba="1 0 0 0" size="0.01 0.01 0.01"></site>
+            <joint name="target:joint" type="free" damping="0.01"></joint>
+        </body>
+
+        <light directional="true" ambient="0.2 0.2 0.2" diffuse="0.8 0.8 0.8" specular="0.3 0.3 0.3" castshadow="false" pos="0 1 4" dir="0 0 -1" name="light0"></light>
+    </worldbody>
+</mujoco>
+       

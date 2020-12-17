@@ -1,0 +1,2 @@
+from tactile_baselines.common.policies.base import Policy
+from tactile_baselines.common.policies.gaussian_mlp_policy import GaussianMLPPolicy

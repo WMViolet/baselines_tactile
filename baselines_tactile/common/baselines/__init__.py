@@ -1,0 +1,2 @@
+from tactile_baselines.common.baselines.base import Baseline
+from tactile_baselines.common.baselines.linear_baseline import LinearFeatureBaseline

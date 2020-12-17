@@ -1,0 +1,14 @@
+<mujoco model="Soft Egg">
+    <option solver="CG" tolerance="1e-6"/>
+
+    <size nconmax="500" njmax="5000" nstack="5000000"/>
+
+    <worldbody>
+        <body pos="0 0 1">
+            <freejoint/>
+            <composite type="ellipsoid" count='6 6 8' spacing='0.01' prefix='object'>
+                <geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="2" condim="4"/>
+            </composite>
+        </body>
+    </worldbody>
+</mujoco>
