@@ -1,0 +1,4 @@
+*.egg-info/
+share/
+/docker/mjkey.txt
+__pycache__/
