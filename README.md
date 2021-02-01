@@ -148,7 +148,9 @@ python experiment_utils/ec2ctl.py kill specific_full_name_of_an_experiment
 ```
 python viskit/frontend.py any_folder_with_all_the_experiments_that_you_want_to_visualize
 ```
-
+Example results [here](https://github.com/VioIchigo/baselines_tactile/blob/main/imgs/Screen%20Shot%202021-02-01%20at%203.28.05%20PM.png).
+### Visualize contact points
+Example results [here](https://github.com/VioIchigo/baselines_tactile/blob/main/imgs/Screen%20Shot%202021-02-01%20at%203.29.45%20PM.png).
 
 
 ## Subpackages
